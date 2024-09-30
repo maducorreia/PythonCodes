@@ -12,6 +12,6 @@ media = soma/tamanho
 for y in range(tamanho):
     if notas[y] >= media:
         print("Aluno aprovado!")
-    cont += 1
+        cont += 1
 print(f"A média das notas foi: {media} e a soma das notas foi: {soma} e a quantidade de \n"
       f"alunos acima ou na média foi de: {cont}")
