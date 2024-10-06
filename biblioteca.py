@@ -1,3 +1,4 @@
+#coloquei os def em forma de comentário pra poder testar o código
 opcoes = 0
 continuar = 2
 usu_cadastro = [""]*5
