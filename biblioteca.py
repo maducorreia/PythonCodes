@@ -1,48 +1,41 @@
-#coloquei os def em forma de comentário pra poder testar o código
-opcoes = 0
-continuar = 2
-usu_cadastro = [""]*5
-senha_cadastro = [""]*5
-while True:
-    #def opcoes(menu):
-    print("Bem-vindo(a) ao Madu System! ")
-    print("1 - Cadastro \n2 - Login \n3 - Mostrar usuários \n4 - Sair ")
-    opcoes = int(input("Escolha dentre as opções acima o que deseja fazer:   "))
+def piramide_numero(n):
+    for i in range(1, n+1):
+        for x in range(i):
+            print(i, end = " ")
+        print()
+def piramide2(n):
+    for i in range(1, n+1, 1):
+        for x in range(1, i+1):
+            print(x, end = " ")
+        print()
+def vogais(texto):
+    cont = 0
+    for i in texto:
+        if i in "aeiouAEIOU":
+            cont += 1
+    print(f"O texto digitado tem: {cont} vogais")
+def nome_inverso(nome1, nome2, nome3,nome4,nome5):
+    nomes = [""] * 5
+    nomes[0] = nome1
+    nomes[1] = nome2
+    nomes[2] = nome3
+    nomes[3] = nome4
+    nomes[4] = nome5
+    print(nomes)
+    nomes.reverse()
 
-    if opcoes == 1:
-        #def opcoes(cadastro):
-        print("Vamos iniciar o Cadastro!")
-        usu_cadastro = input("Digite um nome de usuário: ")
-        senha_cadastro = int(input("Digite uma senha: "))
-        print("Cadastro efetuado com sucesso!")
-        #transformar o bloco de continuar em um def?
-        continuar = int(input("Deseja fazer mais alguma coisa? Se SIM digite 1 se NÃO digite 2: "))
-        if continuar == 1:
-            print(f"Bem-vindo(a) ao Madu System, {usu_cadastro}! O que deseja fazer agora? ")
-            print("1 - Cadastro \n2 - Login \n3 - Mostrar usuários \n4 - Sair ")
-            opcoes = int(input("Escolha dentre as opções acima o que deseja fazer:   "))
-        elif continuar == 2:
-            print("Até a próxima!")
-
-    elif opcoes == 2:
-        #def opcoes(login):
-        print("Vamos iniciar o Login!")
-        usu_login = input("Digite o seu nome de usuário: ")
-        senha_login = int(input("Digite a sua senha: "))
-        if usu_login == usu_cadastro and senha_login == senha_cadastro:
-            print("Login efetuado com sucesso!")
-        else:
-            print("Nome de usuário e/ou senha incorreto(s)")
-            continuar = int(input("Deseja fazer mais alguma coisa? Se SIM digite 1 se NÃO digite 2: "))
-
-    elif opcoes == 3:
-        #def opcoes(mostrar usuarios):
-        print(f"Os seguintes usuários estão cadastrados no sistema: {usu_cadastro}")
-
-    elif opcoes == 4:
-        #def opcoes(sair):
-        print("Saindo do sistema.")
-        break
-
-
-
+def somar(*num):
+    tam = len(num)
+    soma = 0
+    for i in range(tam):
+        soma = soma + num[i]
+def texto(letras):
+    cont = 0
+    tam = len(letras)
+    for i in letras:
+        cont += 1
+    print(f"O texto digitado tem: {cont} letras")
+    #letras.reverse()
+    print(letras)
+    for x in range(tam-1,-1,-1):
+        print(letras[x])
