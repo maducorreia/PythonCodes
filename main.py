@@ -1,9 +1,15 @@
-a = int(input("Digite um valor para A"))
-b = int(input("Digite um valor para B"))
-c = int(input("Digite um valor para C"))
-soma = a+b
-if soma > c:
-    print(f"A soma entre A e B é {soma}  e ela é maior que C")
-else:
-    print(f"A soma entre A e B é {soma}  e ela é menor que C")
-
+from biblioteca import *
+p1 = Pessoa("João", 75, 21)
+p2 = Pessoa("Madu", 66, 20)
+print(p1.nome)
+print(p1.peso)
+print(p1.idade)
+print(p2.nome)
+print(p2.peso)
+print(p2.idade)
+p1.comer()
+p1.andar()
+p1.dormir()
+p2.comer()
+p2.andar()
+p2.dormir()
