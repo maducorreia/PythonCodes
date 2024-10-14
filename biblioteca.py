@@ -117,8 +117,15 @@ class Corredor(Atleta):
     def __init__(self, nome, aquecido, aposentado, peso):
         super().__init__(nome, aquecido,aposentado,peso)
     def correr(self):
-        if (""):
+        if self.aquecido == True:
             print(f"{self.nome} está correndo")
+            if self.aposentado == True:
+                print(f"{self.nome} não está correndo porque está aposentado")
+            else:
+                print(f"{self.nome} está correndo porque está aposentado")
+        else:
+            print(f"{self.nome} não está correndo porque não se aqueceu")
+
 
 class Nadador(Atleta):
     def __init__(self, nome, aquecido, aposentado, peso):
