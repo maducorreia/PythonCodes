@@ -118,36 +118,87 @@ class Corredor(Atleta):
         super().__init__(nome, aquecido,aposentado,peso)
     def correr(self):
         if self.aquecido == True:
-            print(f"{self.nome} está correndo")
+            print(f"{self.nome} está correndo porque se aqueceu")
+            self.correndo = True
             if self.aposentado == True:
                 print(f"{self.nome} não está correndo porque está aposentado")
             else:
-                print(f"{self.nome} está correndo porque está aposentado")
+                print(f"{self.nome} está correndo porque não está aposentado")
         else:
             print(f"{self.nome} não está correndo porque não se aqueceu")
-
 
 class Nadador(Atleta):
     def __init__(self, nome, aquecido, aposentado, peso):
         super().__init__(nome, aquecido, aposentado, peso)
     def nadar(self):
-        print(f"{self.nome} está nadando")
+            if self.aquecido == True:
+                print(f"{self.nome} está nadando porque está aquecido")
+                self.nadando = True
+                if self.aposentado == True:
+                    print(f"{self.nome} não está nadando porque está aposentado")
+                else:
+                    print(f"{self.nome} não está nadando porque está aposentado")
+            else:
+                print(f"{self.nome} não está nadando porque está não aqueceu")
 
 class Ciclista(Atleta):
     def __init__(self, nome, aquecido, aposentado, peso):
         super().__init__(nome, aquecido, aposentado, peso)
     def pedalar(self):
         print(f"{self.nome} está pedalando")
+        if self.aquecido == True:
+            print(f"{self.nome} está pedalando porque está aquecido")
+            self.pedalando = True
+            if self.aposentado == True:
+                print(f"{self.nome} não está pedalando porque está aposentado")
+            else:
+                print(f"{self.nome} ")
+        else:
+            print(f"{self.nome} está pedalando porque não está aposentado ")
 
 class Triatleta(Atleta):
     def __init__(self, nome, aquecido, aposentado, peso):
         super().__init__(nome, aquecido, aposentado, peso)
     def correr(self):
-        print(f"{self.nome} está correndo")
+        if self.aquecido == True:
+            print(f"{self.nome} está correndo porque se aqueceu")
+            self.correndo = True
+            if self.aposentado == True:
+                print(f"{self.nome} não está correndo porque está aposentado")
+            else:
+                print(f"{self.nome} está correndo porque não está aposentado")
+        else:
+            print(f"{self.nome} não está correndo porque não se aqueceu")
     def nadar(self):
-        print(f"{self.nome} está nadando")
+            if self.aquecido == True:
+                print(f"{self.nome} está nadando porque está aquecido")
+                self.nadando = True
+                if self.aposentado == True:
+                    print(f"{self.nome} não está nadando porque está aposentado")
+                else:
+                    print(f"{self.nome} não está nadando porque está aposentado")
+            else:
+                print(f"{self.nome} não está nadando porque está não aqueceu")
     def pedalar(self):
         print(f"{self.nome} está pedalando")
+        if self.aquecido == True:
+            print(f"{self.nome} está pedalando porque está aquecido")
+            self.pedalando = True
+            if self.aposentado == True:
+                print(f"{self.nome} não está pedalando porque está aposentado")
+            else:
+                print(f"{self.nome} ")
+        else:
+            print(f"{self.nome} está pedalando porque não está aposentado ")
+
+def gravar_texto(texto):
+    with open("registro.txt", "a") as arquivo:
+        arquivo.write(f"{texto}\n")
+def ler_texto():
+    with open("registro.txt", "r") as arquivo2:
+        texto = arquivo2.read()
+        print(texto)
+
 
 
 
